@@ -130,9 +130,6 @@ main{
 h4{
     font-size: 24px;
 }
-.fa-truck{
-    color: #39b54a;
-}
 
 .precio{
     font-size: 18px;
@@ -150,7 +147,11 @@ h4{
 }
 .descripciones{
     font-size: 16px;
-    display: none;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+.caja-elemento:hover .descripciones{
+    visibility: visible;
 }
 .Ultima{
     width: 100vw;
@@ -162,6 +163,11 @@ h4{
     width: 90%;
     box-sizing: border-box;
     display: inline-block;
+    position: relative;
+    transition: all 0.5s;
+}
+.Productos-caja-general:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 .Productos-caja-general img{
     width: 100%;
@@ -171,22 +177,35 @@ h4{
     border-top: 1px solid #ebebeb;
     text-align: left;
     padding: 15px;
+    height: 60px;
+    /* overflow: hidden; */
+    box-sizing: border-box;
+    transition: all 0.5s;
     position: relative;
 }
+.caja-elemento:hover{
+    height: 104px;
+}
+
 main section article .caja-elemento i{
     display: block;
     font-size: 16px;
     padding: 5px;
     width: 30px;
     height: 30px;
+    color: #39b54a;
     border: 1px solid #39b54a;
     background-color: #FFF;
     border-radius: 50%;
     position:absolute;
     right: 20px;
     top: -15px;
+    transition: all 0.5s;
     box-sizing: border-box;
     }
+main section article .caja-elemento i:hover{
+    transform: rotateZ(-90deg)
+}
 .caja-des-prec{
     display: flex;
     flex-direction: row;
@@ -295,7 +314,7 @@ footer{
 
 }
 
-@media (min-width:768px){
+@media (min-width:769px){
     .logo-bar-dollar{
         display: flex;
         flex-direction: row;
@@ -334,6 +353,22 @@ footer{
         margin-right: 10px;
         box-sizing: border-box;
     }
+    /* .subcaja-pie{
+        display: flex;
+        flex-direction: row;
+    }
+    .linea-a{
+        margin: 5px;
+    }
+    .linea-b{
+        margin: 5px;
+    }
+    .linea-c{
+        margin: 5px;
+    } */
+    .iconos:hover{
+        color: black;
+    }
 
 }
 
@@ -344,7 +379,20 @@ footer{
         margin-left: 15px;
         margin-right:15px;
     }
-
+    .subcaja-pie{
+        display: flex;
+        flex-direction: row;
+    }
+    .linea-a{
+        margin: 20px;
+    }
+    .linea-b{
+        margin: 20px;
+    }
+    .linea-c{
+        margin: 20px;
+    }
+    
 }
 
 
