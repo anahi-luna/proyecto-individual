@@ -95,3 +95,9 @@ h5{
 .input-reset{
     margin-left: 20px;
 }
+@media (min-width:600px){
+    .container{
+        max-width: 600px;
+        margin: auto;
+    }
+}

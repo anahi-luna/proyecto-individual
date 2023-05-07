@@ -74,6 +74,7 @@ header{
 }
 .lista-a{
     list-style: none;
+    /* text-decoration:line-through; */
     margin-top: 20px ;
     margin-bottom: 15px;
     display: none;
@@ -201,8 +202,9 @@ main section article .caja-elemento i{
     right: 20px;
     top: -15px;
     transition: all 0.5s;
-    box-sizing: border-box;
-    }
+    box-sizing: border-box; 
+}
+
 main section article .caja-elemento i:hover{
     transform: rotateZ(-90deg)
 }
@@ -266,10 +268,13 @@ footer{
         width: 100%;
     }
     .logo-search{
-        width: 65%;
+        width: 70%;
+        padding-right: 0;
+        padding-top: 10px;
+        justify-content: space-between;
     }
     .logo-container{
-        width: 50%;
+        width: 45%;
     }
     .logo-img{
         width: 100%;
@@ -334,7 +339,12 @@ footer{
         margin: 0;
     }
     .logo-search .Barra-de-busqueda{
-        width: 50%;
+        width: 65%;
+        padding-right: 0;
+        justify-content: center;
+    }
+    .segundo{
+        width: 31%;
     }
     .barra-contenido{
         width: 80%;
@@ -343,6 +353,7 @@ footer{
         display: flex;
         justify-content: space-between;
         margin: 15px;
+        margin-top: 0;
         box-sizing: border-box;
     }
     .barra-menu lu{
@@ -352,6 +363,9 @@ footer{
     .barra-menu li{
         margin-right: 10px;
         box-sizing: border-box;
+    }
+    .lista-b li i{
+        margin-left: 3px;
     }
     /* .subcaja-pie{
         display: flex;
@@ -379,6 +393,17 @@ footer{
         margin-left: 15px;
         margin-right:15px;
     }
+    .logo-search{
+        width: 75%;
+    }
+    .logo-img{
+        width: 50%;
+    }
+    .segundo{
+        text-align: right;
+        margin-right: 15px;
+        box-sizing: border-box;
+    }
     .subcaja-pie{
         display: flex;
         flex-direction: row;
@@ -394,7 +419,22 @@ footer{
     }
     
 }
-
+@media(min-width:1200px){
+    .logo-bar-dollar, .barra-menu{
+        max-width: 1200px;
+        margin: auto;
+    }
+    .logo-search{
+        padding-left: 0;
+    }
+    .segundo{
+        margin-right: 0;
+    }
+    .lista-b li{
+        margin-right: 0;
+        margin-left: 10px;
+    }
+}
 
 
 
