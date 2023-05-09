@@ -2,7 +2,7 @@
 const express= require('express');
 const path = require('path');
 const app = express();
-
+const PORT= process.env.PORT || 3000;
 
 app.get('/home', (req, res)=>{
     res.sendFile(path.join(__dirname,'./views/home.html'))
@@ -15,6 +15,6 @@ app.get('/login', (req,res) =>{
 })
 app.use(express.static('public'))
 
-app.listen(3000, ()=>{
-    console.log('Servidor escuchando en el puerto 3000');
+app.listen(PORT, ()=>{
+    console.log('Servidor escuchando en el puerto'+PORT);
 })
